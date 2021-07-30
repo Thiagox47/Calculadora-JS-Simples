@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" type="text/css" href="./grafica.css" media="screen">
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="calctxt">Calculadora</h1> 
+            <div id="texto">
+                <input type="number" name="num1" id="num1">
+                <p id="p1">+</p> 
+                <input type="number" name="num2" id="num2">
+                    <div id="botoes">
+                        <button  type="button" name="soma" id="soma" onclick="soma()">+</button>
+                        <button type="button" name="subtracao" id="subtracao" onclick="subtracao()">-</button>
+                        <button type="button" name="divisao" id="divisao" onclick="divisao()">/</button>
+                        <button type="button" name="multiplicacao" id="multiplicacao" onclick="multiplicacao()">*</button>
+                        <button type="button" name="porcentagem" id="porcentagem" onclick="porcentagem()">%</button>
+                        <button name="raiz" id="raiz" onclick="raiz()">√</button>
+                    </div>
+                <button type="button" name="calcular" id="calcular" onclick="calcular()">=</button>
+            </div>
+        <p id="resp">Resultado</p>
+    </div>
+<footer>
+    <p>&copy;Thiago Vinicius</p>
+</footer>
+</body>
+</html>
