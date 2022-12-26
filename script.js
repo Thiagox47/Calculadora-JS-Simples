@@ -1,56 +1,74 @@
-function soma(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '+'
-} 
-function subtracao(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '-'
+//Variavel Global do paragrafo da operação.
+let p1 = document.getElementById("p1");
+
+//Variavel da resposta e variavel da soma.
+let res = document.getElementById('resp');
+
+//Funções que realizam a alteração do caractere para operação.
+function soma() {
+    p1.innerHTML = '+';
+    document.getElementById('num1').style.display = "block";
 }
-function multiplicacao(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '*'
+
+function subtracao() {
+    p1.innerHTML = '-';
+    document.getElementById('num1').style.display = "block";
 }
-function divisao(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '/'
+
+function multiplicacao() {
+    p1.innerHTML = '*';
+    document.getElementById('num1').style.display = "block";
 }
-function raiz(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '√'
+
+function divisao() {
+    p1.innerHTML = '/';
+    document.getElementById('num1').style.display = "block";
 }
-function porcentagem(){
-    var p1 = document.getElementById('p1')
-    p1.innerHTML = '%'
+
+function raiz() {
+    p1.innerHTML = '√';
+    document.getElementById('num1').style.display = "none";
 }
-function calcular(){  
-    var tn1 = document.getElementById('num1')
-    var tn2 = document.getElementById('num2')
-    var res = document.getElementById('resp')
-    var p1 = document.getElementById('p1').innerHTML
-    var n1 = Number(tn1.value)
-    var n2 = Number(tn2.value)
-    var s 
-    switch(p1){
-        case '+':
-            s = n1 + n2
-            break
-        case '-':
-            s = n1 - n2
-            break
-        case '*':
-            s = n1 * n2
-            break
-        case '/':
-            s = n1 / n2
-            break
-        case '√':
-            s = Math.sqrt(n1)
-            break
-        case '%':
-            s = (n1 / 100) * n2
-            break
-        default:
-            break
+
+function porcentagem() {
+    p1.innerHTML = '%';
+    document.getElementById('num1').style.display = "block";
+}
+
+//Função que realiza o calculo.
+function calcular() {
+    //Variaveis dos inputs.
+    let n1 = Number(document.getElementById('num1').value);
+    let n2 = Number(document.getElementById('num2').value);
+    //Verificar se há dados inseridos nos inputs e se foi selecionada a operação.
+    if (p1.innerHTML == "" | n1 == "" & n2 == "") {
+        alert("Os valores devem ser adicionados e a operação deve ser escolhida, verifique se está tudo certo antes de continuar!")
+    } else {
+        //Variavel da resposta e switch que identifica qual operação está sendo utilizada.
+        let s;
+        switch (p1.innerHTML) {
+            case '+':
+                s = n1 + n2
+                break
+            case '-':
+                s = n1 - n2
+                break
+            case '*':
+                s = n1 * n2
+                break
+            case '/':
+                s = n1 / n2
+                break
+            case '√':
+                s = Math.sqrt(n2)
+                break
+            case '%':
+                s = (n1 / 100) * n2
+                break
+            default:
+                break
+        }
+        //Mostra o resultado.
+        res.innerHTML = `O resultado é: ${s}`
     }
-    res.innerHTML = `${s}`
 }
