@@ -7,32 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Simples JS</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="calc.ico" />
+    <link rel="shortcut icon" href="calc.ico">
 </head>
 
 <body>
-    <div id="div1">
-        <h1 id="calctxt">Calculadora JS</h1>
-        <div id="texto">
-            <!--Inputs e paragrafo onde o sinal da operação está-->
+    <div id="calculator">
+        <h1 id="title">Calculadora JS</h1>
+        <div id="input-section">
             <input type="number" name="num1" id="num1">
-            <p id="p1"></p>
+            <p id="operation"></p>
             <input type="number" name="num2" id="num2">
-            <!--Div dos botões das operações-->
-            <div id="botoes">
-                <button type="button" name="soma" id="soma" onclick="soma()">+</button>
-                <button type="button" name="subtracao" id="subtracao" onclick="subtracao()">-</button>
-                <button type="button" name="divisao" id="divisao" onclick="divisao()">/</button>
-                <button type="button" name="multiplicacao" id="multiplicacao" onclick="multiplicacao()">*</button>
-                <button type="button" name="porcentagem" id="porcentagem" onclick="porcentagem()">%</button>
-                <button name="raiz" id="raiz" onclick="raiz()">√</button>
-            </div>
-            <button type="button" name="calcular" id="calcular" onclick="calcular()">=</button>
         </div>
-        <!--Onde será mostrado o resultado-->
-        <p id="resp">Resultado</p>
+        <div id="buttons-section">
+            <button type="button" name="add" id="add" onclick="changeOperation('+')">+</button>
+            <button type="button" name="subtract" id="subtract" onclick="changeOperation('-')">-</button>
+            <button type="button" name="divide" id="divide" onclick="changeOperation('/')">/</button>
+            <button type="button" name="multiply" id="multiply" onclick="changeOperation('*')">*</button>
+            <button type="button" name="percentage" id="percentage" onclick="changeOperation('%')">%</button>
+            <button name="square-root" id="square-root" onclick="changeOperation('√')">√</button>
+        </div>
+        <button type="button" name="calculate" id="calculate" onclick="calculate()">=</button>
+        <p id="result">Resultado</p>
     </div>
-    <!--Meu copy-->
     <footer>
         <p>&copy;Thiago Vinicius</p>
     </footer>

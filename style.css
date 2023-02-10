@@ -8,45 +8,46 @@ body {
     background-color: rgb(170, 88, 88);
 }
 
-#div1 {
+#calculator {
     width: 300px;
     height: 300px;
     border: solid 1px rgb(0, 0, 0);
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px black;
     background: rgb(236, 216, 160);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-#calctxt {
-    width: 300px;
+#title {
     text-align: center;
 }
 
-#texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#num1, #num2 {
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
 }
 
-#botoes {
-    display: flex;
-    margin-top: 25px;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
-#botoes button {
+#operation {
+    text-align: center;
+    font-size: 15px;
     margin: 10px;
 }
 
-#calcular {
-    margin-top: 5%;
-    width: 90px;
-    height: 30px;
-}
-
-#resp {
+footer {
+    margin-top: 20px;
     text-align: center;
 }
